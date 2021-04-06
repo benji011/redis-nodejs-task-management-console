@@ -1,0 +1,17 @@
+<h1>Task details {{task.title}} [{{task.id}}]</h1>
+
+<ul class="list-group">
+  <li class="list-group-item">
+    <strong>Title:</strong>
+    {{task.title}}
+  </li>
+  <li class="list-group-item">
+    <strong>Brief description:</strong>
+    {{task.description}}
+  </li>
+</ul>
+
+<a class="btn btn-default pull-left" href="/">Back</a>
+<form method="POST" action="/tasks/delete/{{task.id}}?_method=DELETE">
+  <input type="submit" class="btn btn-danger pull-right" value="Delete">
+</form>
